@@ -10,6 +10,22 @@ module.exports = {
       },
       height: {
         '18': '4.5rem',
+      },
+      boxShadow: {
+        header: '0 2px 4px rgba(0, 0, 0, 0.5)',
+      },
+      colors: {
+        primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
+        background: 'var(--color-background)',
+        surface: 'var(--color-surface)',
+        error: 'var(--color-error)',
+      },
+      lineHeight: {
+        '18': '4.5rem',
+      },
+      transitionDuration: {
+        '235': '235ms',
       }
     }
   }
