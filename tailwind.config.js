@@ -8,8 +8,14 @@ module.exports = {
       maxWidth: {
         '8xl': '90rem',
       },
+      width: {
+        '18': '4.5rem',
+      },
       height: {
         '18': '4.5rem',
+      },
+      zIndex: {
+        '5': 5,
       },
       boxShadow: {
         header: '0 2px 4px rgba(0, 0, 0, 0.5)',
