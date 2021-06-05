@@ -1,5 +1,5 @@
 .brand__logo {
-  background: url('https://material.io/static/angular/mio-logo-sprite.7a0afcb5bbfe71a9a330.png') 100% 50%/auto 100% no-repeat;
+  background: var(--logo-url) 100% 50%/auto 100% no-repeat;
 }
 
 .brand__title {

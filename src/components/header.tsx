@@ -1,10 +1,8 @@
 import React, { useState, useMemo, useEffect, useCallback } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link, NavLink } from 'react-router-dom'
-import logo from './logo.svg'
 import SearchIcon from '@material-ui/icons/Search'
 import CloseIcon from '@material-ui/icons/Close'
 import clsx from 'clsx'
-import { makeStyles } from '@material-ui/core'
 import './header.css'
 
 export interface HeaderLink {
@@ -13,6 +11,8 @@ export interface HeaderLink {
 }
 
 export interface HeaderProps {
+  logoUrl: string
+  logoText: string
   links: HeaderLink[]
 }
 
@@ -33,7 +33,7 @@ const NavList: React.FC<{ links: HeaderLink[] }> = ({ links }) => {
     )
     items.push(item)
   }
-  return <ul className="nav-list">{items}</ul>
+  return <ul className="nav-list m-0">{items}</ul>
 }
 
 export const Header: React.FC<HeaderProps> = (props) => {
@@ -44,9 +44,9 @@ export const Header: React.FC<HeaderProps> = (props) => {
       <>
         <header className="header sticky h-18 top-0 w-full flex justify-between z-10 shadow-header">
           <a className="brand flex items-center h-18 pl-6 no-underline" href="/">
-            <i className="brand__logo block w-8 h-8 mr-4"></i>
+            <i style={{ '--logo-url': props.logoUrl }} className="brand__logo block w-8 h-8 mr-4"></i>
             <span className="brand__title text-primary text-base font-normal leading-normal uppercase">
-              Material Design
+              {props.logoText}
             </span>
           </a>
           <nav className="nav ml-auto list-none block">

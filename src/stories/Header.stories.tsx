@@ -12,6 +12,8 @@ const Template: Story<HeaderProps> = (args) => <Header {...args} />
 
 export const Preview = Template.bind({})
 Preview.args = {
+  logoUrl: 'https://material.io/static/angular/mio-logo-sprite.7a0afcb5bbfe71a9a330.png',
+  logoText: 'Material Design',
   links: [
     { path: '/design', text: 'design' },
     { path: '/components', text: 'components' },
@@ -19,4 +21,4 @@ Preview.args = {
     { path: '/resources', text: 'resources' },
     { path: '/blog', text: 'blog' },
   ]
-}
+} as HeaderProps
