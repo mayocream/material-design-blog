@@ -8,24 +8,25 @@ module.exports = {
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
+    "@storybook/addon-postcss",
   ],
-  webpackFinal: async (config) => {
-    config.module.rules.push({
-      test: /\,css&/,
-      use: [
-        {
-          loader: 'postcss-loader',
-          options: {
-            ident: 'postcss',
-            plugins: [
-              require('tailwindcss'),
-              require('autoprefixer')
-            ]
-          }
-        }
-      ],
-      include: path.resolve(__dirname, '../'),
-    })
-    return config
-  }
+  // webpackFinal: async (config) => {
+  //   config.module.rules.push({
+  //     test: /\,css&/,
+  //     use: [
+  //       {
+  //         loader: 'postcss-loader',
+  //         options: {
+  //           ident: 'postcss',
+  //           plugins: [
+  //             require('tailwindcss'),
+  //             require('autoprefixer')
+  //           ]
+  //         }
+  //       }
+  //     ],
+  //     include: path.resolve(__dirname, '../'),
+  //   })
+  //   return config
+  // }
 }
