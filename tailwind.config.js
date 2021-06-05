@@ -14,6 +14,9 @@ module.exports = {
       height: {
         '18': '4.5rem',
       },
+      margin: {
+        '18': '4.5rem',
+      },
       zIndex: {
         '5': 5,
       },
@@ -38,6 +41,7 @@ module.exports = {
       screens: {
         'md-max': { 'max': '767px' },
       },
+      textColor: ['visited'],
     },
   },
 }
