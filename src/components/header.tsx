@@ -3,20 +3,20 @@ import { BrowserRouter as Router, Switch, Route, Link, NavLink } from 'react-rou
 import logo from './logo.svg'
 import SearchIcon from '@material-ui/icons/Search'
 import CloseIcon from '@material-ui/icons/Close'
-import './App.css'
 import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core'
+import './header.css'
 
-interface AppProps {}
+export interface HeaderLink {
+  path: string
+  text: string
+}
 
-const NavList = () => {
-  const links = [
-    { path: '/design', text: 'design' },
-    { path: '/components', text: 'components' },
-    { path: '/develop', text: 'develop' },
-    { path: '/resources', text: 'resources' },
-    { path: '/blog', text: 'blog' },
-  ]
+export interface HeaderProps {
+  links: HeaderLink[]
+}
+
+const NavList: React.FC<{ links: HeaderLink[] }> = ({ links }) => {
   const items = []
   for (const { path, text } of links) {
     const item = (
@@ -36,7 +36,7 @@ const NavList = () => {
   return <ul className="nav-list">{items}</ul>
 }
 
-function App({}: AppProps) {
+export const Header: React.FC<HeaderProps> = (props) => {
   const [showSearch, setShowSeach] = useState(false)
 
   return (
@@ -50,7 +50,7 @@ function App({}: AppProps) {
             </span>
           </a>
           <nav className="nav ml-auto list-none block">
-            <NavList />
+            <NavList links={props.links} />
           </nav>
           <form
             className={clsx('bg-white flex z-5 transition-opacity duration-100', {
@@ -94,5 +94,3 @@ function App({}: AppProps) {
     </Router>
   )
 }
-
-export default App

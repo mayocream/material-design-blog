@@ -1,0 +1,11 @@
+.brand__logo {
+  background: url('https://material.io/static/angular/mio-logo-sprite.7a0afcb5bbfe71a9a330.png') 100% 50%/auto 100% no-repeat;
+}
+
+.brand__title {
+  font-family: "Roboto Mono", monospace;
+}
+
+.selected .nav-indicator {
+  @apply scale-y-100;
+}
