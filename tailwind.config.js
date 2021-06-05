@@ -23,16 +23,21 @@ module.exports = {
       colors: {
         primary: 'var(--color-primary)',
         secondary: 'var(--color-secondary)',
+        fade: 'var(--color-fade)',
         background: 'var(--color-background)',
         surface: 'var(--color-surface)',
         error: 'var(--color-error)',
       },
       lineHeight: {
+        '12': '3rem',
         '18': '4.5rem',
       },
       transitionDuration: {
         '235': '235ms',
-      }
-    }
-  }
-};
+      },
+      screens: {
+        'md-max': { 'max': '767px' },
+      },
+    },
+  },
+}

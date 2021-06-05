@@ -9,3 +9,15 @@
 .selected .nav-indicator {
   @apply scale-y-100;
 }
+
+.nav-list:hover .nav-link {
+  @apply text-fade;
+}
+
+.nav-link {
+  @apply text-primary;
+}
+
+.nav-list .nav-link:hover {
+  @apply text-primary;
+}
