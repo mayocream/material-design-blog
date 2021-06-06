@@ -22,40 +22,43 @@ export interface ArticleListProps {
 
 const FeaturedPost: React.FC<{ item: ArticleSummary }> = ({ item }) => {
   const h1Style = css({
-    fontSize: '5.25rem',
-    lineHeight: '5.75rem',
     fontVariationSettings: '"wght" 100, "wdth" 100, "opsz" 8',
     fontWeight: 300,
-    fontFamily: '"Noto Sans SC", "Noto Sans JP", "Noto Sans"',
   })
   return (
-    <Link
-      css={css`
-        :visited {
-          color: '#616161';
-        }
-      `}
-      to={item.url}
-      className="no-underline flex flex-row items-center"
-    >
+    <Link to={item.url} className="group no-underline flex-col md:flex flex-row items-center">
       <div className="flex-1 mb-10 pr-10">
-        <h1 css={h1Style} className="mb-8">
+        <h1 css={h1Style} className="mb-6 md:mb-8 text-2.5rem md:text-5.25rem leading-3.25rem md:leading-5.75rem">
           {item.title}
         </h1>
-        <div className="flex flex-row">
+        <div className="flex flex-col md:flex-row">
           <time
-            css={{ marginTop: '-3px', fontFamily: '"Roboto Mono", monospace' }}
-            className="mr-6"
+            css={{ fontFamily: '"Roboto Mono", monospace' }}
+            className="mt-0 md:-mt-3px mr-0 md:mr-6 mb-8 md:mb-0"
             dateTime={item.date.toUTCString()}
           >
             {dayjs(item.date).format('MM.DD.YY')}
           </time>
           <div>
-            <p css={{fontWeight: 100}}>{item.subtitle}</p>
+            <p
+              css={css({
+                fontWeight: 100,
+                letterSpacing: '0.03125em',
+                lineHeight: '1.25rem',
+              })}
+            >
+              {item.subtitle}
+            </p>
           </div>
         </div>
       </div>
-      <div className="flex-1 flex"></div>
+      <div className="flex-1 w-full">
+        <img
+          css={css({ transition: 'border-radius 100ms 0ms cubic-bezier(0.4, 0, 0.2, 1)' })}
+          className="w-full rounded-2xl group-hover:rounded-10"
+          src={item.image}
+        />
+      </div>
     </Link>
   )
 }

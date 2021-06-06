@@ -24,6 +24,8 @@
   --color-text-hint-on-dark: hsla(0, 0%, 100%, 0.5);
   --color-text-disabled-on-dark: hsla(0, 0%, 100%, 0.5);
   --color-text-icon-on-dark: hsla(0, 0%, 100%, 0.5);
+  --mdc-typography-font-family: "Roboto Flex", "Roboto", "Noto Sans SC", "Noto Sans JP", "Noto Sans", sans-serif;
+  --mdc-typography-body1-font-size: 1rem;
 }
 
 @tailwind base;
@@ -40,4 +42,6 @@ html {
   color: #424242;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&family=Noto+Sans+SC:wght@100;300;400&family=Noto+Serif&family=Noto+Serif+JP&family=Noto+Serif+SC&family=Source+Sans+Pro&display=swap');
+@import url('./md.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&family=Noto+Sans+SC:wght@100;300;400&family=Noto+Serif&family=Noto+Serif+JP&family=Noto+Serif+SC&family=Source+Sans+Pro&family=Roboto+Mono&family=Roboto:wght@100;300;400&display=swap');
