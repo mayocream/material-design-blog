@@ -6,6 +6,7 @@ module.exports = {
   variants: {
     extend: {
       borderRadius: ['responsive', 'hover', 'group-hover'],
+      padding: ['responsive', 'odd'],
     },
   },
   theme: {
@@ -34,9 +35,6 @@ module.exports = {
         '18': '4.5rem',
       },
       height: {
-        '18': '4.5rem',
-      },
-      margin: {
         '18': '4.5rem',
       },
       zIndex: {
@@ -76,6 +74,8 @@ module.exports = {
       },
       margin: {
         '-3px': '-3px',
+        '18': '4.5rem',
+        '30': '7.5rem',
       },
     },
   },
