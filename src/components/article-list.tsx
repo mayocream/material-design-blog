@@ -6,15 +6,7 @@ import dayjs from 'dayjs'
 import { css } from '@emotion/react'
 import SearchIcon from '@material-ui/icons/Search'
 import CloseIcon from '@material-ui/icons/Close'
-
-export interface ArticleSummary {
-  url: string
-  title: string
-  subtitle: string
-  date: Date
-  pin?: boolean
-  image?: string
-}
+import { ArticleSummary } from './types'
 
 export interface ArticleListProps {
   list: ArticleSummary[]

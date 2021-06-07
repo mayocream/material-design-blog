@@ -1,0 +1,22 @@
+__section a:hover, __section a:focus {
+  opacity: .8;
+}
+
+__section a:visited {
+  color: #616161;
+}
+
+__section p {
+  @apply my-4;
+}
+
+__section p > a {
+  @apply text-secondary underline;
+  letter-spacing: 0;
+}
+
+__section h2, __section h3, __section h4, __section h5, __section h6 {
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+

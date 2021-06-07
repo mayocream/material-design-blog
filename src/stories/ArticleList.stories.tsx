@@ -1,7 +1,8 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
 
-import { ArticleList, ArticleListProps, ArticleSummary } from '../components/article-list'
+import { ArticleList, ArticleListProps } from '../components/article-list'
+import { ArticleSummary } from 'src/components/types'
 
 export default {
   title: 'MD/ArticleList',

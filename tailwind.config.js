@@ -52,6 +52,7 @@ module.exports = {
         error: 'var(--color-error)',
       },
       lineHeight: {
+        '1.2': '1.2',
         '12': '3rem',
         '3.25rem': '3.25rem',
         '18': '4.5rem',
@@ -67,6 +68,7 @@ module.exports = {
       textColor: ['visited'],
       borderRadius: {
         '10': '2.5rem',
+        '2rem': '2rem',
       },
       flex: {
         '1/2': '1 1 50%',
